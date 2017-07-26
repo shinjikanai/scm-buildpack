@@ -66,6 +66,6 @@ ls -al $BUILD_DIR | indent
 # vendor directories
 VENDORED_GEMS="${BUILD_DIR}/vendor/gems"
 echo "installing ruby sinatra"
-GEM_HOME=$VENDORED_GEMS gem install sinatra --no-document 
-whereis ruby
+gem install sinatra --no-document 
+gem env
 
