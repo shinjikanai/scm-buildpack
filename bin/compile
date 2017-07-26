@@ -64,10 +64,7 @@ echo "=====> build dir listing"
 ls -al $BUILD_DIR | indent
 
 # vendor directories
-VENDORED_OPENRESTY="${BUILD_DIR}/vendor/openresty"
-VENDORED_FOREGO="${BUILD_DIR}/vendor/bin/forego"
 VENDORED_GEMS="${BUILD_DIR}/vendor/gems"
 echo "installing ruby sinatra"
-GEM_HOME=$VENDORED_GEMS gem install sinatra --no-ri --no-rdoc
-ls -al ${BUILD_DIR}
-ls -al ${BUILD_DIR}/vendor
+GEM_HOME=$VENDORED_GEMS gem install sinatra 
+
