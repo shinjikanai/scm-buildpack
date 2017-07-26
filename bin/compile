@@ -62,3 +62,6 @@ fi
 
 echo "=====> build dir listing"
 ls -al $BUILD_DIR | indent
+
+echo "installing ruby sinatra"
+gem install sinatra
