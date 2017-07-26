@@ -68,4 +68,6 @@ VENDORED_GEMS="${BUILD_DIR}/vendor/gems"
 echo "installing ruby sinatra"
 GEM_HOME=$VENDORED_GEMS gem install sinatra --no-document 
 GEM_HOME=$VENDORED_GEMS gem env
-
+echo "export PATH=\"\$HOME/vendor/gems/bin:\$PATH\"" > $BUILD_DIR/.profile.d/gems.sh
+echo "export GEM_HOME=\"\$HOME/vendor/gems\"" >> $BUILD_DIR/.profile.d/gems.sh
+echo "export GEM_PATH=\"\$HOME/vendor/gems:\$GEM_PATH\"" >> $BUILD_DIR/.profile.d/gems.sh
