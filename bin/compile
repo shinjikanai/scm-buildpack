@@ -65,9 +65,12 @@ ls -al $BUILD_DIR | indent
 
 # vendor directories
 VENDORED_GEMS="${BUILD_DIR}/vendor/gems"
+mkdir $VENDORED_GEMS
 echo "installing ruby sinatra"
 GEM_HOME=$VENDORED_GEMS gem install sinatra --no-document 
 GEM_HOME=$VENDORED_GEMS gem env
+mkdir -p ${BUILD_DIR}/vendor/bin
+mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=\"\$HOME/vendor/gems/bin:\$PATH\"" > $BUILD_DIR/.profile.d/gems.sh
 echo "export GEM_HOME=\"\$HOME/vendor/gems\"" >> $BUILD_DIR/.profile.d/gems.sh
 echo "export GEM_PATH=\"\$HOME/vendor/gems:\$GEM_PATH\"" >> $BUILD_DIR/.profile.d/gems.sh
