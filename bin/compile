@@ -64,4 +64,4 @@ echo "=====> build dir listing"
 ls -al $BUILD_DIR | indent
 
 echo "installing ruby sinatra"
-sudo gem install sinatra
+GEM_HOME=$VENDORED_GEMS gem install sinatra --no-ri --no-rdoc
