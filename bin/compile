@@ -63,6 +63,8 @@ fi
 echo "=====> build dir listing"
 ls -al $BUILD_DIR | indent
 
+echo "hello everyone"
+
 # vendor directories
 VENDORED_GEMS="${BUILD_DIR}/vendor/gems"
 mkdir $VENDORED_GEMS
